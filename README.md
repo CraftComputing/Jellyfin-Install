@@ -18,7 +18,7 @@ We will install Jellyfin on bare metal, rather than in a Docker container.
 `echo "deb https://repo.jellyfin.org/ubuntu $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list`
 
 ### Add the Jellyfin GPG key
-`sudo apt-get install -y apt-transport-https gnupg-curl`
+`sudo apt-get install -y apt-transport-https gnupg-curl`\
 `sudo curl https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/jellyfin.gpg`
 
 ### Install Jellyfin Server
