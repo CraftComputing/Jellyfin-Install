@@ -7,7 +7,7 @@ This tutorial was written for Ubuntu 24.04 Server/Desktop, and should work on mo
 Install Ubuntu 24.04
 
 Run
-`sudo apt update && sudo apt upgrade`\
+`sudo apt update && sudo apt upgrade`
 
 Reboot to apply updates.
 
@@ -15,11 +15,11 @@ Reboot to apply updates.
 We will install Jellyfin on bare metal, rather than in a Docker container.
 
 ### Add the Jellyfin Repository
-`echo "deb https://repo.jellyfin.org/ubuntu $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list`\
+`echo "deb https://repo.jellyfin.org/ubuntu $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list`
 
 ### Add the Jellyfin GPG key
 `sudo apt-get install -y apt-transport-https gnupg-curl`\
-`sudo curl https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/jellyfin.gpg`\
+`sudo curl https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/jellyfin.gpg`
 
 ### Install Jellyfin Server
 `sudo apt update`\
@@ -27,10 +27,10 @@ We will install Jellyfin on bare metal, rather than in a Docker container.
 
 ### Set Jellyfin as a service
 `sudo systemctl enable jellyfin`\
-`sudo systemctl start jellyfin`\
+`sudo systemctl start jellyfin`
 
 ### Verify Jellyfin is running
-`sudo systemctl status jellyfin`\
+`sudo systemctl status jellyfin`
 
 ### Check the web server
 `curl -I http://localhost:8096`\
