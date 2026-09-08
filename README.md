@@ -18,8 +18,8 @@ We will install Jellyfin on bare metal, rather than in a Docker container.
 `echo "deb https://repo.jellyfin.org/ubuntu $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list`
 
 ### Add the Jellyfin GPG key
-`sudo apt-get install -y apt-transport-https gnupg-curl`\
-`sudo curl https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/jellyfin.gpg`
+`sudo apt-get install -y apt-transport-https gnupg -y`\
+`curl -fsSL https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-jellyfin.gpg`
 
 ### Install Jellyfin Server
 `sudo apt update`\
@@ -41,4 +41,10 @@ OR
 Open a web browser to http://YOUR-IP:8096
 
 # Setting up Jellyfin
+
+Open a web browser to http://YOUR-IP:8096
+
+Walk through the wizard to set up a User and Password.
+
+If you already have media in a local directory, you can set up Library folders now. If you plan on connecting to a network share, those instructions will be covered shortly.
 
