@@ -183,7 +183,7 @@ Add network path to fstab for automatic mounting
 `sudo nano /etc/fstab`\
 \
 Add the following line to the bottom of the file:
-`//YOUR_NAS_IP/media_share /mnt/media cifs credentials=/root/.smbcredentials,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0`
+`//YOUR_NAS_IP/media_share /mnt/jellyfin cifs credentials=/root/.smbcredentials,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0`
 
 Update and reload systemd manager and configuration:
 `sudo systemctl daemon-reload`
