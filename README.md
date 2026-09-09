@@ -55,7 +55,7 @@ Drivers for Intel i915/i965 are part of the Linux Kernel, so no download require
 In the terminal, enter:
 `sudo usermod -aG video $USER`
 
-Install Intel GPU Tools for monitoring
+Install Intel GPU Tools for monitoring:
 `sudo apt update && sudo apt install intel-gpu-tools -y`
 
 Reboot the system for changes to take effect
